@@ -1,7 +1,6 @@
 
 package hometest;
 
-import hometest.singlethreaded.SortBugFile;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileInputStream;
@@ -48,7 +47,7 @@ public class WorkingWithStream {
         try {
             writer.write(String.format("%s\n", line));
         } catch (IOException ex) {
-            Logger.getLogger(SortBugFile.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(WorkingWithStream.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
