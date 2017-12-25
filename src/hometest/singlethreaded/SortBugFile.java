@@ -1,5 +1,6 @@
-package porechnyhometest;
+package hometest.singlethreaded;
 
+import hometest.WorkingWithStream;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -10,14 +11,14 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class PorechnyHomeTest {
+public class SortBugFile {
 
     private int amountMikroFiles = -1;
     private final int amountLineInMikroFiles;
     private final String nameMikroFile = "temp//mikro_file_";
     private final String pathBigFile;
 
-    public PorechnyHomeTest(String pathBigFile, int amountLineInMikroFiles) {
+    public SortBugFile(String pathBigFile, int amountLineInMikroFiles) {
         this.amountLineInMikroFiles = amountLineInMikroFiles;
         this.pathBigFile = pathBigFile;
         addNewDir();
@@ -44,7 +45,7 @@ public class PorechnyHomeTest {
             }
 
         } catch (IOException ex) {
-            Logger.getLogger(PorechnyHomeTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SortBugFile.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         WorkingWithStream.closeFile(reader);
@@ -73,7 +74,7 @@ public class PorechnyHomeTest {
             try {
                 writer.write(String.format("%s\n", line));
             } catch (IOException ex) {
-                Logger.getLogger(PorechnyHomeTest.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(SortBugFile.class.getName()).log(Level.SEVERE, null, ex);
             }
         });
 
@@ -136,7 +137,7 @@ public class PorechnyHomeTest {
         try {
             return reader.readLine();
         } catch (IOException ex) {
-            Logger.getLogger(PorechnyHomeTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SortBugFile.class.getName()).log(Level.SEVERE, null, ex);
             return "";
         }
     }
