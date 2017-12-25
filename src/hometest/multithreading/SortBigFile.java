@@ -18,7 +18,7 @@ public class SortBigFile {
     private final String nameMikroFile = "temp//mikro_file_";
     private final String pathBigFile;
 
-    public SortBugFile(String pathBigFile, int amountLineInMikroFiles) {
+    public SortBigFile(String pathBigFile, int amountLineInMikroFiles) {
         this.amountLineInMikroFiles = amountLineInMikroFiles;
         this.pathBigFile = pathBigFile;
         addNewDir();
