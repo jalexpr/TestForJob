@@ -1,12 +1,12 @@
 
-//import hometest.singlethreaded.SortBugFile;
-import hometest.multithreading.SortBugFile;
+//import hometest.singlethreaded.SortBigFile;
+import hometest.multithreading.SortBigFile;
 
 
 public class Test {
     
     public static void main(String[] args) {
-        SortBugFile por = new SortBugFile("Test1.csv", 500000);
+        SortBigFile por = new SortBigFile("Test1.csv", 500000);
         por.mapBigFile();
         por.reduceInNewBigFile();
     }
