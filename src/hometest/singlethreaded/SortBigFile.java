@@ -18,7 +18,7 @@ public class SortBigFile {
     private final String nameMikroFile = "temp//mikro_file_";
     private final String pathBigFile;
 
-    public SortBugFile(String pathBigFile, int amountLineInMikroFiles) {
+    public SortBigFile(String pathBigFile, int amountLineInMikroFiles) {
         this.amountLineInMikroFiles = amountLineInMikroFiles;
         this.pathBigFile = pathBigFile;
         addNewDir();
@@ -45,7 +45,7 @@ public class SortBigFile {
             }
 
         } catch (IOException ex) {
-            Logger.getLogger(SortBugFile.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SortBigFile.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         WorkingWithStream.closeFile(reader);
@@ -74,7 +74,7 @@ public class SortBigFile {
             try {
                 writer.write(String.format("%s\n", line));
             } catch (IOException ex) {
-                Logger.getLogger(SortBugFile.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(SortBigFile.class.getName()).log(Level.SEVERE, null, ex);
             }
         });
 
@@ -137,7 +137,7 @@ public class SortBigFile {
         try {
             return reader.readLine();
         } catch (IOException ex) {
-            Logger.getLogger(SortBugFile.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SortBigFile.class.getName()).log(Level.SEVERE, null, ex);
             return "";
         }
     }
