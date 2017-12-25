@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class SortBugFile {
+public class SortBigFile {
 
     private int amountMikroFiles = -1;
     private final int amountLineInMikroFiles;
